@@ -1,13 +1,20 @@
 import spacy
-from typing import List, Dict, Tuple
-from ai_checker import AIChecker
 import streamlit as st
+from typing import List, Dict, Tuple
+import subprocess
+import sys
+from ai_checker import AIChecker
 import re
 
 @st.cache_resource
 def load_model():
     """Ładuje model spaCy"""
-    return spacy.load("pl_core_news_sm")
+    try:
+        return spacy.load("pl_core_news_sm")
+    except OSError:
+        # Instalujemy model jeśli nie jest zainstalowany
+        subprocess.check_call([sys.executable, "-m", "spacy", "download", "pl_core_news_sm"])
+        return spacy.load("pl_core_news_sm")
 
 def find_phrases(text: str, phrases: List[str], nlp) -> Tuple[List[Dict[str, str]], Dict[str, int]]:
     """
