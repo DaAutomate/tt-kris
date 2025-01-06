@@ -1,6 +1,7 @@
-streamlit
-pandas
-plotly
-spacy==3.7.2
-python-dotenv
-requests
+streamlit==1.29.0
+pandas==2.1.4
+plotly==5.18.0
+numpy==1.24.3
+spacy==3.5.3
+python-dotenv==1.0.0
+requests==2.31.0
