@@ -5,3 +5,4 @@ spacy==3.7.2  # Najnowsza wersja z obsługą nowszych Pythona
 thinc==8.2.1  # Kompatybilna wersja backendu spaCy
 python-dotenv==1.0.0
 requests==2.31.0
+plotly
