@@ -130,3 +130,4 @@ def highlight_text(text: str, variants: List[Dict[str, str]]) -> str:
     highlighted_text = highlighted_text.replace("\n", "<br>")
     
     return f'<div style="white-space: pre-wrap;">{highlighted_text}</div>'
+
