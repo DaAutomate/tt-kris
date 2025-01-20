@@ -1,7 +1,7 @@
 streamlit==1.29.0
 pandas==2.1.4
-plotly==5.18.0
-numpy==1.26.4  # Zaktualizowana wersja kompatybilna z Pandas
-spacy==3.5.3
+numpy==1.26.4
+spacy==3.7.2  # Najnowsza wersja z obsługą nowszych Pythona
+thinc==8.2.1  # Kompatybilna wersja backendu spaCy
 python-dotenv==1.0.0
 requests==2.31.0
